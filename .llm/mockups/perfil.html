@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fut App — Perfil Público</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-white min-h-screen pb-24">
+
+  <!-- Topbar -->
+  <header class="border-b border-gray-800/50 px-5 py-4 flex items-center gap-4 sticky top-0 bg-slate-950/90 backdrop-blur-xl z-10 shadow-lg">
+    <a href="home.html" class="text-gray-400 hover:text-white text-2xl transition-colors">←</a>
+    <div class="flex-1">
+      <div class="font-bold text-lg text-white">Perfil Público</div>
+      <div class="text-xs text-gray-400">Estatísticas e histórico</div>
+    </div>
+    <button class="text-gray-400 hover:text-white text-2xl transition-colors">⋯</button>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-5 py-6">
+
+    <!-- Header do perfil -->
+    <div class="relative bg-gradient-to-br from-green-900/40 via-gray-900/80 to-gray-900/50 backdrop-blur border border-green-700/30 rounded-3xl p-8 mb-8 overflow-hidden shadow-2xl">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+
+      <div class="relative flex flex-col md:flex-row items-center md:items-start gap-6">
+        <!-- Avatar -->
+        <div class="relative">
+          <div class="w-24 h-24 rounded-3xl bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center font-black text-4xl shadow-2xl shadow-yellow-500/30">
+            R
+          </div>
+          <div class="absolute -bottom-2 -right-2 w-8 h-8 bg-green-600 rounded-full border-4 border-gray-900 flex items-center justify-center">
+            <span class="text-xs">✓</span>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="flex-1 text-center md:text-left">
+          <div class="text-3xl font-black text-white mb-2">Rafael Silva</div>
+          <div class="text-sm text-gray-400 mb-4">Membro desde Janeiro 2026 • 2 grupos ativos</div>
+
+          <!-- Stats rápidas -->
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+            <div class="bg-gray-900/60 backdrop-blur border border-gray-700/50 rounded-xl px-4 py-2">
+              <div class="text-xs text-gray-500 mb-1">Partidas</div>
+              <div class="text-xl font-black text-white">24</div>
+            </div>
+            <div class="bg-gray-900/60 backdrop-blur border border-gray-700/50 rounded-xl px-4 py-2">
+              <div class="text-xs text-gray-500 mb-1">Vitórias</div>
+              <div class="text-xl font-black text-green-400">15</div>
+            </div>
+            <div class="bg-gray-900/60 backdrop-blur border border-gray-700/50 rounded-xl px-4 py-2">
+              <div class="text-xs text-gray-500 mb-1">Gols</div>
+              <div class="text-xl font-black text-yellow-400">32</div>
+            </div>
+            <div class="bg-gray-900/60 backdrop-blur border border-gray-700/50 rounded-xl px-4 py-2">
+              <div class="text-xs text-gray-500 mb-1">Assistências</div>
+              <div class="text-xl font-black text-blue-400">18</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Badge de melhor jogador -->
+        <div class="bg-yellow-900/40 border border-yellow-700/50 rounded-2xl px-4 py-3 text-center backdrop-blur">
+          <div class="text-3xl mb-1">🏆</div>
+          <div class="text-xs text-yellow-400 font-bold uppercase tracking-wider">Top Player</div>
+          <div class="text-xs text-gray-400 mt-1">#1 em gols</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Troféus -->
+    <div class="mb-8">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-5 flex items-center gap-2">
+        <span class="w-1 h-4 bg-yellow-500 rounded-full"></span>
+        Troféus acumulados
+      </h2>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- MVP -->
+        <div class="bg-gradient-to-br from-yellow-900/40 to-gray-900/80 border border-yellow-700/50 rounded-2xl p-5 text-center shadow-lg hover:scale-105 transition-transform">
+          <div class="text-4xl mb-3">🏅</div>
+          <div class="text-3xl font-black text-yellow-400 mb-1">7</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">MVP</div>
+        </div>
+
+        <!-- Framboesa -->
+        <div class="bg-gradient-to-br from-red-900/40 to-gray-900/80 border border-red-700/50 rounded-2xl p-5 text-center shadow-lg hover:scale-105 transition-transform">
+          <div class="text-4xl mb-3">🍓</div>
+          <div class="text-3xl font-black text-red-400 mb-1">2</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Framboesa</div>
+        </div>
+
+        <!-- Artilheiro -->
+        <div class="bg-gradient-to-br from-green-900/40 to-gray-900/80 border border-green-700/50 rounded-2xl p-5 text-center shadow-lg hover:scale-105 transition-transform">
+          <div class="text-4xl mb-3">⚽</div>
+          <div class="text-3xl font-black text-green-400 mb-1">32</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Gols Total</div>
+        </div>
+
+        <!-- Assistente -->
+        <div class="bg-gradient-to-br from-blue-900/40 to-gray-900/80 border border-blue-700/50 rounded-2xl p-5 text-center shadow-lg hover:scale-105 transition-transform">
+          <div class="text-4xl mb-3">🎯</div>
+          <div class="text-3xl font-black text-blue-400 mb-1">18</div>
+          <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold">Assistências</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estatísticas detalhadas -->
+    <div class="mb-8">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-5 flex items-center gap-2">
+        <span class="w-1 h-4 bg-green-500 rounded-full"></span>
+        Estatísticas detalhadas
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        <!-- Aproveitamento -->
+        <div class="bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 rounded-2xl p-5 shadow-lg">
+          <div class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+            <span class="text-xl">📊</span>
+            Aproveitamento
+          </div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-400">Vitórias</span>
+                <span class="text-green-400 font-bold">62.5%</span>
+              </div>
+              <div class="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden border border-gray-600/30">
+                <div class="bg-gradient-to-r from-green-500 to-emerald-400 h-2 rounded-full" style="width:62.5%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-400">Empates</span>
+                <span class="text-yellow-400 font-bold">16.7%</span>
+              </div>
+              <div class="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden border border-gray-600/30">
+                <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 h-2 rounded-full" style="width:16.7%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-gray-400">Derrotas</span>
+                <span class="text-red-400 font-bold">20.8%</span>
+              </div>
+              <div class="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden border border-gray-600/30">
+                <div class="bg-gradient-to-r from-red-500 to-red-400 h-2 rounded-full" style="width:20.8%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Médias -->
+        <div class="bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 rounded-2xl p-5 shadow-lg">
+          <div class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+            <span class="text-xl">📈</span>
+            Médias por partida
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-green-900/50 border border-green-700/50 flex items-center justify-center text-lg">⚽</div>
+                <span class="text-sm text-gray-300">Gols</span>
+              </div>
+              <span class="text-xl font-black text-green-400">1.3</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-blue-900/50 border border-blue-700/50 flex items-center justify-center text-lg">🎯</div>
+                <span class="text-sm text-gray-300">Assistências</span>
+              </div>
+              <span class="text-xl font-black text-blue-400">0.75</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-purple-900/50 border border-purple-700/50 flex items-center justify-center text-lg">⭐</div>
+                <span class="text-sm text-gray-300">Rating</span>
+              </div>
+              <span class="text-xl font-black text-purple-400">8.5</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Histórico de grupos -->
+    <div class="mb-8">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-5 flex items-center gap-2">
+        <span class="w-1 h-4 bg-blue-500 rounded-full"></span>
+        Grupos participados
+      </h2>
+
+      <div class="space-y-3">
+
+        <!-- Grupo 1 - Ativo -->
+        <a href="grupo.html" class="block bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 hover:border-green-500/50 rounded-2xl p-5 transition-all hover:scale-[1.01] shadow-lg">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <div class="font-bold text-white mb-1">Pelada de Quinta</div>
+              <div class="text-xs text-gray-400">Você é <span class="text-green-400 font-semibold">juiz</span> • 8 jogadores</div>
+            </div>
+            <span class="bg-green-900/50 text-green-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-green-500/30">ATIVO</span>
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            <div class="text-center">
+              <div class="text-lg font-black text-white">15</div>
+              <div class="text-xs text-gray-500">Partidas</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-black text-green-400">20</div>
+              <div class="text-xs text-gray-500">Gols</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-black text-blue-400">12</div>
+              <div class="text-xs text-gray-500">Assistências</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-black text-yellow-400">5</div>
+              <div class="text-xs text-gray-500">MVP</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Grupo 2 - Ativo -->
+        <a href="grupo.html" class="block bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 hover:border-green-500/50 rounded-2xl p-5 transition-all hover:scale-[1.01] shadow-lg">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <div class="font-bold text-white mb-1">Racha do Fim de Ano</div>
+              <div class="text-xs text-gray-400">Você é <span class="text-blue-400 font-semibold">jogador</span> • 12 jogadores</div>
+            </div>
+            <span class="bg-orange-900/50 text-orange-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-orange-500/30">3 DIAS</span>
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            <div class="text-center">
+              <div class="text-lg font-black text-white">9</div>
+              <div class="text-xs text-gray-500">Partidas</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-black text-green-400">12</div>
+              <div class="text-xs text-gray-500">Gols</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-black text-blue-400">6</div>
+              <div class="text-xs text-gray-500">Assistências</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-black text-yellow-400">2</div>
+              <div class="text-xs text-gray-500">MVP</div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Grupo 3 - Encerrado -->
+        <div class="block bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur border border-gray-700/30 rounded-2xl p-5 opacity-60">
+          <div class="flex items-center justify-between mb-3">
+            <div>
+              <div class="font-bold text-gray-300 mb-1">Boleiros FC</div>
+              <div class="text-xs text-gray-500">Você era <span class="text-gray-400 font-semibold">jogador</span> • 6 jogadores</div>
+            </div>
+            <span class="bg-gray-800/50 text-gray-500 text-xs font-bold px-3 py-1.5 rounded-lg border border-gray-600/30">ENCERRADO</span>
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            <div class="text-center">
+              <div class="text-lg font-black text-gray-400">8</div>
+              <div class="text-xs text-gray-600">Partidas</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-black text-gray-400">10</div>
+              <div class="text-xs text-gray-600">Gols</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-black text-gray-400">5</div>
+              <div class="text-xs text-gray-600">Assistências</div>
+            </div>
+            <div class="text-center">
+              <div class="text-lg font-black text-gray-400">3</div>
+              <div class="text-xs text-gray-600">MVP</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Conquistas recentes -->
+    <div class="bg-gradient-to-br from-purple-900/40 to-gray-900/80 border border-purple-700/50 rounded-2xl p-6 shadow-lg">
+      <div class="text-sm font-bold text-white mb-4 flex items-center gap-2">
+        <span class="text-2xl">🎉</span>
+        Conquistas recentes
+      </div>
+      <div class="space-y-3">
+        <div class="flex items-center gap-4 bg-purple-900/30 border border-purple-700/30 rounded-xl px-4 py-3">
+          <span class="text-2xl">🔥</span>
+          <div class="flex-1">
+            <div class="text-sm font-semibold text-white">Sequência de 5 vitórias</div>
+            <div class="text-xs text-gray-400">Conquistado há 2 dias</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-purple-900/30 border border-purple-700/30 rounded-xl px-4 py-3">
+          <span class="text-2xl">⚡</span>
+          <div class="flex-1">
+            <div class="text-sm font-semibold text-white">Hat-trick</div>
+            <div class="text-xs text-gray-400">3 gols em uma partida • há 5 dias</div>
+          </div>
+        </div>
+        <div class="flex items-center gap-4 bg-purple-900/30 border border-purple-700/30 rounded-xl px-4 py-3">
+          <span class="text-2xl">🎯</span>
+          <div class="flex-1">
+            <div class="text-sm font-semibold text-white">Maestro</div>
+            <div class="text-xs text-gray-400">4 assistências em uma partida • há 1 semana</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom nav (mobile) -->
+  <nav class="fixed bottom-0 left-0 right-0 border-t border-gray-800/50 bg-slate-950/90 backdrop-blur-xl px-6 py-3 flex justify-around shadow-2xl">
+    <a href="home.html" class="flex flex-col items-center gap-1.5 text-gray-500 hover:text-white transition-colors">
+      <span class="text-2xl">🏠</span>
+      <span class="text-xs font-medium">Home</span>
+    </a>
+    <a href="grupo.html" class="flex flex-col items-center gap-1.5 text-gray-500 hover:text-white transition-colors">
+      <span class="text-2xl">🏆</span>
+      <span class="text-xs font-medium">Grupos</span>
+    </a>
+    <button class="flex flex-col items-center gap-1.5 text-green-500 relative">
+      <div class="absolute -top-1 w-12 h-1 bg-green-500 rounded-full"></div>
+      <span class="text-2xl filter drop-shadow">👤</span>
+      <span class="text-xs font-bold">Perfil</span>
+    </button>
+  </nav>
+
+</body>
+</html>

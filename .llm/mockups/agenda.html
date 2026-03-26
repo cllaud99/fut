@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fut App — Agenda de Partidas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-white min-h-screen pb-24">
+
+  <!-- Topbar -->
+  <header class="border-b border-gray-800/50 px-5 py-4 flex items-center gap-4 sticky top-0 bg-slate-950/90 backdrop-blur-xl z-10 shadow-lg">
+    <a href="grupo.html" class="text-gray-400 hover:text-white text-2xl transition-colors">←</a>
+    <div class="flex-1">
+      <div class="font-bold text-lg text-white">Agenda de Partidas</div>
+      <div class="text-xs text-gray-400">Pelada de Quinta</div>
+    </div>
+    <button class="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white text-sm font-bold px-4 py-2 rounded-xl transition-all shadow-lg shadow-green-500/20">
+      + Agendar
+    </button>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-5 py-6">
+
+    <!-- Filtros rápidos -->
+    <div class="flex gap-2 mb-6 overflow-x-auto pb-2">
+      <button class="px-4 py-2 bg-green-600 text-white text-sm font-bold rounded-xl whitespace-nowrap shadow-md">
+        Todas (5)
+      </button>
+      <button class="px-4 py-2 bg-gray-800/50 text-gray-400 text-sm font-semibold rounded-xl hover:bg-gray-700 whitespace-nowrap transition-all">
+        Confirmado (1)
+      </button>
+      <button class="px-4 py-2 bg-gray-800/50 text-gray-400 text-sm font-semibold rounded-xl hover:bg-gray-700 whitespace-nowrap transition-all">
+        Pendente (3)
+      </button>
+      <button class="px-4 py-2 bg-gray-800/50 text-gray-400 text-sm font-semibold rounded-xl hover:bg-gray-700 whitespace-nowrap transition-all">
+        Recusado (1)
+      </button>
+    </div>
+
+    <!-- Próxima partida - Destaque -->
+    <div class="mb-6">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 flex items-center gap-2">
+        <span class="w-1 h-4 bg-green-500 rounded-full animate-pulse"></span>
+        Próxima partida
+      </h2>
+
+      <div class="relative bg-gradient-to-br from-green-900/50 via-gray-900/80 to-gray-900/50 backdrop-blur border border-green-700/30 rounded-3xl p-6 overflow-hidden shadow-2xl">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-green-500/10 rounded-full blur-3xl"></div>
+
+        <div class="relative">
+          <!-- Data e Hora -->
+          <div class="flex items-start justify-between mb-5">
+            <div>
+              <div class="text-xs text-green-400 font-bold uppercase tracking-widest mb-2 flex items-center gap-2">
+                <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                Em 2 dias
+              </div>
+              <div class="text-3xl font-black text-white mb-1">Quinta-feira</div>
+              <div class="text-lg text-gray-300">28 de Março • 19:30</div>
+            </div>
+            <div class="bg-green-600/20 border border-green-500/30 rounded-2xl px-5 py-3 text-center backdrop-blur">
+              <div class="text-xs text-green-400 font-semibold mb-1">VOCÊ ESTÁ</div>
+              <div class="text-base font-black text-green-300">CONFIRMADO</div>
+            </div>
+          </div>
+
+          <!-- Local -->
+          <div class="bg-gray-900/60 backdrop-blur border border-gray-700/50 rounded-xl px-4 py-3 mb-4">
+            <div class="flex items-center gap-3">
+              <span class="text-2xl">📍</span>
+              <div>
+                <div class="text-sm font-semibold text-white">Arena Cinco</div>
+                <div class="text-xs text-gray-400">Rua das Flores, 123 • Quadra 2</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Escalação -->
+          <div class="bg-gray-900/60 backdrop-blur border border-gray-700/50 rounded-xl p-4 mb-4">
+            <div class="flex items-center justify-between mb-4">
+              <div class="text-sm font-bold text-white flex items-center gap-2">
+                <span class="text-lg">👥</span>
+                Escalação (6/8 confirmados)
+              </div>
+              <div class="text-xs text-gray-400">Faltam 2 jogadores</div>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="w-full bg-gray-700/50 rounded-full h-2 mb-4 overflow-hidden border border-gray-600/30">
+              <div class="bg-gradient-to-r from-green-500 to-emerald-400 h-2 rounded-full transition-all" style="width:75%"></div>
+            </div>
+
+            <!-- Lista de jogadores -->
+            <div class="grid grid-cols-2 gap-2">
+              <!-- Confirmados -->
+              <div class="flex items-center gap-2 bg-green-900/30 border border-green-700/30 rounded-lg px-3 py-2">
+                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center text-xs font-bold shadow-md">R</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-semibold text-white truncate">Rafael</div>
+                  <div class="text-xs text-green-400">✓ Confirmado</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 bg-green-900/30 border border-green-700/30 rounded-lg px-3 py-2">
+                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 flex items-center justify-center text-xs font-bold shadow-md">M</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-semibold text-white truncate">Marcos</div>
+                  <div class="text-xs text-green-400">✓ Confirmado</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 bg-green-900/30 border border-green-700/30 rounded-lg px-3 py-2">
+                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-purple-600 to-purple-700 flex items-center justify-center text-xs font-bold shadow-md">L</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-semibold text-white truncate">Lucas</div>
+                  <div class="text-xs text-green-400">✓ Confirmado</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 bg-green-900/30 border border-green-700/30 rounded-lg px-3 py-2">
+                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-red-600 to-red-700 flex items-center justify-center text-xs font-bold shadow-md">G</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-semibold text-white truncate">Gui</div>
+                  <div class="text-xs text-green-400">✓ Confirmado</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 bg-green-900/30 border border-green-700/30 rounded-lg px-3 py-2">
+                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-orange-600 to-orange-700 flex items-center justify-center text-xs font-bold shadow-md">P</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-semibold text-white truncate">Pedro</div>
+                  <div class="text-xs text-green-400">✓ Confirmado</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 bg-green-900/30 border border-green-700/30 rounded-lg px-3 py-2">
+                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-pink-600 to-pink-700 flex items-center justify-center text-xs font-bold shadow-md">F</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-semibold text-white truncate">Felipe</div>
+                  <div class="text-xs text-green-400">✓ Confirmado</div>
+                </div>
+              </div>
+
+              <!-- Pendentes -->
+              <div class="flex items-center gap-2 bg-yellow-900/30 border border-yellow-700/30 rounded-lg px-3 py-2">
+                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-cyan-600 to-cyan-700 flex items-center justify-center text-xs font-bold shadow-md">T</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-semibold text-white truncate">Thiago</div>
+                  <div class="text-xs text-yellow-400">? Pendente</div>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 bg-yellow-900/30 border border-yellow-700/30 rounded-lg px-3 py-2">
+                <div class="w-7 h-7 rounded-full bg-gradient-to-br from-indigo-600 to-indigo-700 flex items-center justify-center text-xs font-bold shadow-md">A</div>
+                <div class="flex-1 min-w-0">
+                  <div class="text-xs font-semibold text-white truncate">André</div>
+                  <div class="text-xs text-yellow-400">? Pendente</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ações -->
+          <div class="flex gap-3">
+            <button class="flex-1 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold py-3 rounded-xl transition-all shadow-lg">
+              ✓ Já confirmei
+            </button>
+            <button class="px-6 bg-gray-800/50 hover:bg-red-900/50 text-gray-300 hover:text-red-400 font-semibold py-3 rounded-xl transition-all border border-gray-700/50 hover:border-red-700/50">
+              ✕ Cancelar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outras partidas agendadas -->
+    <div class="mb-8">
+      <h2 class="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4 flex items-center gap-2">
+        <span class="w-1 h-4 bg-blue-500 rounded-full"></span>
+        Próximos jogos
+      </h2>
+
+      <div class="space-y-3">
+
+        <!-- Partida 2 - Pendente de confirmação -->
+        <div class="bg-gradient-to-br from-yellow-900/30 to-gray-900/80 backdrop-blur border border-yellow-700/50 rounded-2xl p-5 shadow-lg">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs text-yellow-400 font-bold uppercase tracking-wider mb-1">Segunda-feira</div>
+              <div class="text-xl font-black text-white">01 de Abril • 20:00</div>
+              <div class="text-xs text-gray-400 mt-1">📍 Arena Cinco • Quadra 1</div>
+            </div>
+            <span class="bg-yellow-900/50 text-yellow-300 text-xs font-bold px-3 py-1.5 rounded-lg border border-yellow-500/30 animate-pulse">
+              AGUARDANDO
+            </span>
+          </div>
+
+          <!-- Mini escalação -->
+          <div class="bg-gray-900/50 border border-gray-700/50 rounded-xl p-3 mb-3">
+            <div class="flex items-center justify-between mb-2">
+              <div class="text-xs text-gray-400">Escalação</div>
+              <div class="text-xs text-yellow-400 font-semibold">4/8 confirmados</div>
+            </div>
+            <div class="flex -space-x-2 mb-2">
+              <div class="w-7 h-7 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 border-2 border-gray-900 flex items-center justify-center text-xs font-bold shadow-md">M</div>
+              <div class="w-7 h-7 rounded-full bg-gradient-to-br from-purple-600 to-purple-700 border-2 border-gray-900 flex items-center justify-center text-xs font-bold shadow-md">L</div>
+              <div class="w-7 h-7 rounded-full bg-gradient-to-br from-red-600 to-red-700 border-2 border-gray-900 flex items-center justify-center text-xs font-bold shadow-md">G</div>
+              <div class="w-7 h-7 rounded-full bg-gradient-to-br from-orange-600 to-orange-700 border-2 border-gray-900 flex items-center justify-center text-xs font-bold shadow-md">P</div>
+              <div class="w-7 h-7 rounded-full bg-gray-700 border-2 border-gray-900 flex items-center justify-center text-xs text-gray-400">+4</div>
+            </div>
+            <div class="w-full bg-gray-700/50 rounded-full h-1.5 overflow-hidden">
+              <div class="bg-gradient-to-r from-yellow-500 to-yellow-400 h-1.5 rounded-full" style="width:50%"></div>
+            </div>
+          </div>
+
+          <div class="flex gap-2">
+            <button class="flex-1 bg-green-600 hover:bg-green-500 text-white text-sm font-bold py-2.5 rounded-xl transition-all">
+              ✓ Confirmar presença
+            </button>
+            <button class="flex-1 bg-red-900/50 hover:bg-red-900/70 text-red-300 text-sm font-bold py-2.5 rounded-xl transition-all border border-red-700/50">
+              ✕ Não vou
+            </button>
+          </div>
+        </div>
+
+        <!-- Partida 3 - Confirmado -->
+        <div class="bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 rounded-2xl p-5 shadow-lg">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Sexta-feira</div>
+              <div class="text-lg font-bold text-white">05 de Abril • 19:00</div>
+              <div class="text-xs text-gray-400 mt-1">📍 Clube do Bairro</div>
+            </div>
+            <span class="bg-green-900/50 text-green-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-green-500/30">
+              CONFIRMADO
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs text-gray-400">
+            <div class="flex -space-x-2">
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-600 border-2 border-gray-900 flex items-center justify-center text-xs font-bold">R</div>
+              <div class="w-6 h-6 rounded-full bg-gradient-to-br from-blue-600 to-blue-700 border-2 border-gray-900 flex items-center justify-center text-xs font-bold">M</div>
+              <div class="w-6 h-6 rounded-full bg-gray-700 border-2 border-gray-900 flex items-center justify-center text-xs">+3</div>
+            </div>
+            <span>5/8 confirmados</span>
+          </div>
+        </div>
+
+        <!-- Partida 4 - Recusado -->
+        <div class="bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur border border-gray-700/30 rounded-2xl p-5 opacity-60">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs text-gray-500 font-bold uppercase tracking-wider mb-1">Domingo</div>
+              <div class="text-lg font-bold text-gray-400">07 de Abril • 16:00</div>
+              <div class="text-xs text-gray-500 mt-1">📍 Arena Sul</div>
+            </div>
+            <span class="bg-red-900/50 text-red-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-red-700/30">
+              NÃO VOU
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs text-gray-500">
+            <div class="flex -space-x-2">
+              <div class="w-6 h-6 rounded-full bg-gray-700 border-2 border-gray-900 flex items-center justify-center text-xs font-bold">M</div>
+              <div class="w-6 h-6 rounded-full bg-gray-700 border-2 border-gray-900 flex items-center justify-center text-xs">+2</div>
+            </div>
+            <span>3/8 confirmados</span>
+          </div>
+
+          <button class="w-full mt-3 bg-gray-800/50 hover:bg-green-900/30 text-gray-400 hover:text-green-400 text-sm font-semibold py-2 rounded-xl transition-all border border-gray-700/50 hover:border-green-700/50">
+            Mudar para "Vou"
+          </button>
+        </div>
+
+        <!-- Partida 5 - Muito longe no futuro -->
+        <div class="bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 rounded-2xl p-5 shadow-lg">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <div class="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Quinta-feira</div>
+              <div class="text-lg font-bold text-white">11 de Abril • 19:30</div>
+              <div class="text-xs text-gray-400 mt-1">📍 Arena Cinco • Quadra 2</div>
+            </div>
+            <span class="bg-gray-800/50 text-gray-400 text-xs font-bold px-3 py-1.5 rounded-lg border border-gray-600/30">
+              SEM RESPOSTA
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2 text-xs text-gray-500 mb-3">
+            <span>0/8 confirmados • Aguardando convites</span>
+          </div>
+
+          <div class="flex gap-2">
+            <button class="flex-1 bg-green-600/80 hover:bg-green-600 text-white text-sm font-bold py-2.5 rounded-xl transition-all">
+              ✓ Vou
+            </button>
+            <button class="flex-1 bg-gray-800/50 hover:bg-gray-700 text-gray-300 text-sm font-semibold py-2.5 rounded-xl transition-all border border-gray-700/50">
+              ? Talvez
+            </button>
+            <button class="flex-1 bg-gray-800/50 hover:bg-red-900/50 text-gray-300 hover:text-red-400 text-sm font-semibold py-2.5 rounded-xl transition-all border border-gray-700/50">
+              ✕ Não
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom nav (mobile) -->
+  <nav class="fixed bottom-0 left-0 right-0 border-t border-gray-800/50 bg-slate-950/90 backdrop-blur-xl px-6 py-3 flex justify-around shadow-2xl">
+    <a href="home.html" class="flex flex-col items-center gap-1.5 text-gray-500 hover:text-white transition-colors">
+      <span class="text-2xl">🏠</span>
+      <span class="text-xs font-medium">Home</span>
+    </a>
+    <button class="flex flex-col items-center gap-1.5 text-green-500 relative">
+      <div class="absolute -top-1 w-12 h-1 bg-green-500 rounded-full"></div>
+      <span class="text-2xl filter drop-shadow">📅</span>
+      <span class="text-xs font-bold">Agenda</span>
+    </button>
+    <a href="grupo.html" class="flex flex-col items-center gap-1.5 text-gray-500 hover:text-white transition-colors">
+      <span class="text-2xl">🏆</span>
+      <span class="text-xs font-medium">Grupos</span>
+    </a>
+    <a href="perfil.html" class="flex flex-col items-center gap-1.5 text-gray-500 hover:text-white transition-colors">
+      <span class="text-2xl">👤</span>
+      <span class="text-xs font-medium">Perfil</span>
+    </a>
+  </nav>
+
+</body>
+</html>

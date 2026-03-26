@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fut App — Mockups</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#10b981',
+            'brand-light': '#34d399',
+            'brand-dark': '#059669',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes gradient {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .animated-gradient {
+      background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+      background-size: 200% 200%;
+      animation: gradient 15s ease infinite;
+    }
+  </style>
+</head>
+<body class="animated-gradient text-white min-h-screen flex flex-col items-center justify-center p-8 relative overflow-hidden">
+
+  <!-- Background decoration -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-20 right-20 w-96 h-96 bg-green-500/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-20 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-3xl w-full text-center relative z-10">
+
+    <!-- Logo Hero -->
+    <div class="mb-12">
+      <div class="flex items-center justify-center gap-4 mb-4">
+        <div class="text-6xl filter drop-shadow-lg">⚽</div>
+        <h1 class="text-7xl font-black tracking-tight bg-gradient-to-r from-white via-green-100 to-green-400 bg-clip-text text-transparent">
+          fut<span class="text-green-500">.</span>
+        </h1>
+      </div>
+      <p class="text-gray-400 text-xl font-medium">Mockups Visuais — Fase 0</p>
+      <p class="text-gray-500 text-sm mt-2">Sistema de acompanhamento de estatísticas de futebol para grupos de amigos</p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+      <a href="login.html" class="group relative bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 hover:border-green-500/50 rounded-2xl p-6 text-left transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-transparent rounded-2xl transition-all duration-300"></div>
+        <div class="relative">
+          <div class="text-4xl mb-4 filter drop-shadow">🔐</div>
+          <div class="font-bold text-xl text-white group-hover:text-green-400 transition-colors mb-2">Login / Cadastro</div>
+          <div class="text-sm text-gray-400">Autenticação com email e senha</div>
+        </div>
+      </a>
+
+      <a href="home.html" class="group relative bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 hover:border-green-500/50 rounded-2xl p-6 text-left transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-transparent rounded-2xl transition-all duration-300"></div>
+        <div class="relative">
+          <div class="text-4xl mb-4 filter drop-shadow">🏠</div>
+          <div class="font-bold text-xl text-white group-hover:text-green-400 transition-colors mb-2">Home</div>
+          <div class="text-sm text-gray-400">Feed de grupos do usuário</div>
+        </div>
+      </a>
+
+      <a href="grupo.html" class="group relative bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 hover:border-green-500/50 rounded-2xl p-6 text-left transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-transparent rounded-2xl transition-all duration-300"></div>
+        <div class="relative">
+          <div class="text-4xl mb-4 filter drop-shadow">🏆</div>
+          <div class="font-bold text-xl text-white group-hover:text-green-400 transition-colors mb-2">Grupo</div>
+          <div class="text-sm text-gray-400">Placar do desafio + partidas + membros</div>
+        </div>
+      </a>
+
+      <a href="agenda.html" class="group relative bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 hover:border-green-500/50 rounded-2xl p-6 text-left transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-transparent rounded-2xl transition-all duration-300"></div>
+        <div class="relative">
+          <div class="text-4xl mb-4 filter drop-shadow">📅</div>
+          <div class="font-bold text-xl text-white group-hover:text-green-400 transition-colors mb-2">Agenda de Partidas</div>
+          <div class="text-sm text-gray-400">Jogos futuros + escalação + confirmações</div>
+        </div>
+      </a>
+
+      <a href="partida.html" class="group relative bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 hover:border-green-500/50 rounded-2xl p-6 text-left transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-transparent rounded-2xl transition-all duration-300"></div>
+        <div class="relative">
+          <div class="text-4xl mb-4 filter drop-shadow">⚽</div>
+          <div class="font-bold text-xl text-white group-hover:text-green-400 transition-colors mb-2">Partida</div>
+          <div class="text-sm text-gray-400">Timeline de eventos + VAR + Votação</div>
+        </div>
+      </a>
+
+      <a href="perfil.html" class="group relative md:col-span-2 bg-gradient-to-br from-gray-900/80 to-gray-800/50 backdrop-blur border border-gray-700/50 hover:border-green-500/50 rounded-2xl p-6 text-left transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10">
+        <div class="absolute inset-0 bg-gradient-to-br from-green-500/0 to-green-500/0 group-hover:from-green-500/5 group-hover:to-transparent rounded-2xl transition-all duration-300"></div>
+        <div class="relative">
+          <div class="text-4xl mb-4 filter drop-shadow">👤</div>
+          <div class="font-bold text-xl text-white group-hover:text-green-400 transition-colors mb-2">Perfil Público</div>
+          <div class="text-sm text-gray-400">Estatísticas pessoais + troféus + histórico de grupos</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Footer info -->
+    <div class="mt-12 text-gray-500 text-xs">
+      <p>Design system: Tailwind CSS • Inspiração: Apps esportivos modernos</p>
+    </div>
+
+  </div>
+</body>
+</html>

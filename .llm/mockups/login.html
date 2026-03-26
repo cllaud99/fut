@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fut App — Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+    .float-animation {
+      animation: float 6s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-slate-950 via-gray-900 to-slate-950 text-white min-h-screen flex flex-col relative overflow-hidden">
+
+  <!-- Background decorations -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute top-1/4 right-10 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 left-10 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+  </div>
+
+  <!-- Nav mockup -->
+  <div class="fixed top-6 left-6 z-20">
+    <a href="index.html" class="text-gray-400 hover:text-white text-sm transition-colors flex items-center gap-2 bg-gray-900/50 backdrop-blur px-3 py-2 rounded-lg border border-gray-800/50">
+      <span>←</span> Mockups
+    </a>
+  </div>
+
+  <div class="flex-1 flex items-center justify-center p-6 relative z-10">
+    <div class="w-full max-w-md">
+
+      <!-- Logo -->
+      <div class="text-center mb-10 float-animation">
+        <div class="flex items-center justify-center gap-3 mb-4">
+          <span class="text-5xl filter drop-shadow-lg">⚽</span>
+          <span class="text-5xl font-black tracking-tight bg-gradient-to-r from-white to-green-400 bg-clip-text text-transparent">
+            fut<span class="text-green-500">.</span>
+          </span>
+        </div>
+        <p class="text-gray-400 text-base">Seu grupo. Seu placar. Suas estatísticas.</p>
+      </div>
+
+      <!-- Tabs -->
+      <div class="flex bg-gray-900/50 backdrop-blur rounded-xl p-1.5 mb-8 border border-gray-800/50">
+        <button id="tab-login" onclick="showTab('login')" class="flex-1 py-3 text-sm font-bold rounded-lg bg-gradient-to-r from-green-600 to-emerald-600 text-white shadow-lg shadow-green-500/20 transition-all">
+          Entrar
+        </button>
+        <button id="tab-cadastro" onclick="showTab('cadastro')" class="flex-1 py-3 text-sm font-semibold rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-all">
+          Cadastrar
+        </button>
+      </div>
+
+      <!-- Form Login -->
+      <div id="form-login" class="space-y-5">
+        <div>
+          <label class="block text-xs text-gray-400 mb-2 font-semibold uppercase tracking-wider">Email</label>
+          <input
+            type="email"
+            placeholder="seu@email.com"
+            class="w-full bg-gray-900/50 backdrop-blur border border-gray-700/50 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 rounded-xl px-4 py-3.5 text-sm outline-none placeholder-gray-600 transition-all shadow-sm"
+          />
+        </div>
+        <div>
+          <label class="block text-xs text-gray-400 mb-2 font-semibold uppercase tracking-wider">Senha</label>
+          <input
+            type="password"
+            placeholder="••••••••"
+            class="w-full bg-gray-900/50 backdrop-blur border border-gray-700/50 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 rounded-xl px-4 py-3.5 text-sm outline-none placeholder-gray-600 transition-all shadow-sm"
+          />
+        </div>
+        <button class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/30 hover:scale-[1.02] mt-4">
+          Entrar
+        </button>
+        <p class="text-center text-xs text-gray-500">
+          Esqueceu a senha? <span class="text-green-400 cursor-pointer hover:underline font-semibold">Recuperar</span>
+        </p>
+      </div>
+
+      <!-- Form Cadastro -->
+      <div id="form-cadastro" class="space-y-5 hidden">
+        <div>
+          <label class="block text-xs text-gray-400 mb-2 font-semibold uppercase tracking-wider">Nome</label>
+          <input
+            type="text"
+            placeholder="Seu nome completo"
+            class="w-full bg-gray-900/50 backdrop-blur border border-gray-700/50 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 rounded-xl px-4 py-3.5 text-sm outline-none placeholder-gray-600 transition-all shadow-sm"
+          />
+        </div>
+        <div>
+          <label class="block text-xs text-gray-400 mb-2 font-semibold uppercase tracking-wider">Email</label>
+          <input
+            type="email"
+            placeholder="seu@email.com"
+            class="w-full bg-gray-900/50 backdrop-blur border border-gray-700/50 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 rounded-xl px-4 py-3.5 text-sm outline-none placeholder-gray-600 transition-all shadow-sm"
+          />
+        </div>
+        <div>
+          <label class="block text-xs text-gray-400 mb-2 font-semibold uppercase tracking-wider">Senha</label>
+          <input
+            type="password"
+            placeholder="Mínimo 8 caracteres"
+            class="w-full bg-gray-900/50 backdrop-blur border border-gray-700/50 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 rounded-xl px-4 py-3.5 text-sm outline-none placeholder-gray-600 transition-all shadow-sm"
+          />
+          <p class="text-xs text-gray-500 mt-2">Use letras, números e caracteres especiais</p>
+        </div>
+        <button class="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold py-4 rounded-xl transition-all shadow-lg shadow-green-500/20 hover:shadow-green-500/30 hover:scale-[1.02] mt-4">
+          Criar conta
+        </button>
+        <p class="text-center text-xs text-gray-500">
+          Ao criar conta, você concorda com nossos <span class="text-green-400 cursor-pointer hover:underline">Termos de Uso</span>
+        </p>
+      </div>
+
+      <!-- Social login (future) -->
+      <div class="mt-8 pt-6 border-t border-gray-800/50">
+        <p class="text-center text-xs text-gray-600 mb-4">Em breve: login com</p>
+        <div class="flex gap-3 justify-center">
+          <button disabled class="flex-1 bg-gray-900/50 border border-gray-800/50 text-gray-600 py-3 rounded-xl text-sm font-semibold cursor-not-allowed">
+            Google
+          </button>
+          <button disabled class="flex-1 bg-gray-900/50 border border-gray-800/50 text-gray-600 py-3 rounded-xl text-sm font-semibold cursor-not-allowed">
+            Apple
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function showTab(tab) {
+      const loginEl = document.getElementById('form-login')
+      const cadastroEl = document.getElementById('form-cadastro')
+      const tabLogin = document.getElementById('tab-login')
+      const tabCadastro = document.getElementById('tab-cadastro')
+
+      if (tab === 'login') {
+        loginEl.classList.remove('hidden')
+        cadastroEl.classList.add('hidden')
+        tabLogin.classList.add('bg-gradient-to-r', 'from-green-600', 'to-emerald-600', 'text-white', 'shadow-lg', 'shadow-green-500/20')
+        tabLogin.classList.remove('text-gray-400', 'hover:bg-gray-800/50')
+        tabCadastro.classList.remove('bg-gradient-to-r', 'from-green-600', 'to-emerald-600', 'text-white', 'shadow-lg', 'shadow-green-500/20')
+        tabCadastro.classList.add('text-gray-400', 'hover:bg-gray-800/50')
+      } else {
+        cadastroEl.classList.remove('hidden')
+        loginEl.classList.add('hidden')
+        tabCadastro.classList.add('bg-gradient-to-r', 'from-green-600', 'to-emerald-600', 'text-white', 'shadow-lg', 'shadow-green-500/20')
+        tabCadastro.classList.remove('text-gray-400', 'hover:bg-gray-800/50')
+        tabLogin.classList.remove('bg-gradient-to-r', 'from-green-600', 'to-emerald-600', 'text-white', 'shadow-lg', 'shadow-green-500/20')
+        tabLogin.classList.add('text-gray-400', 'hover:bg-gray-800/50')
+      }
+    }
+  </script>
+</body>
+</html>
